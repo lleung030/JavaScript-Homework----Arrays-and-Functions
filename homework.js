@@ -4,7 +4,7 @@ the list and checks that the current name is in the string passed in. The output
 "Matched dog_name" if name is in the string, if no matches are present console.log "No Matches"
 */
 let dog_string = "Hello Max, my name is Dog, and I have purple eyes!"
-let dog_names = ["Max","HAVE","PuRple","dog"]
+let dog_names = ["Max","HAS","PuRple","dog"]
 
 // console.log(dog_names.join(' '))
 /*
@@ -17,19 +17,33 @@ return true
 // console.log('HELLO'.toLowerCase())
 
 function findWords(dog_names, dog_string){
-    dog_string = dog_string.toLowerCase() 
-    for (let i = 0; i < dog_string.length; i++){
-    for (let i = 0; i < dog_names.length; i++) {
-        if (dog_string.includes(dog_names[i].toLowerCase)){
-            return true
+    for (words in dog_names){
+        if (dog_string.includes(dog_names[words])){
+            console.log('match found')
         } else {
-            return false
-        }   
+            console.log('not a match')
+        }
     }
 }
-}
+
+
+// function findWords(dog_names, dog_string){
+//     dog_string = dog_string.toLowerCase() 
+//     for (let i = 0; i < dog_string.length; i++){
+//     for (let j = 0; j < dog_names.length; j++) {
+//         if (dog_string.includes(dog_names[j].toLowerCase()))
+
+//         {
+//             console.log('matched')
+//         } else {
+//             console.log('no matches')
+//         }   
+//     }
+// }
+// }
 
 console.log(findWords(dog_names, dog_string))
+
 
 //Call method here with parameters
 
